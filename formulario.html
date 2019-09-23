@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head><meta charset="UTF-8"/>
+		<title>elogroup</title>	
+		<link rel="stylesheet" type="text/css" href="_css/form.css" />
+		<script language="javascript" src="_javascript/funcoes.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+	</head>
+	
+	<body>
+		<div id="interface">
+			<header id="cabecalho">
+				<hgroup>
+					<h1>Elogroup</h1>
+					<h2>Alavancas de produtividade e inovação</h2>
+					<h4>Combinadas para gerar transformações de alto impacto</h4>
+				</hgroup>	
+			</header>
+			<section id="corpo-full">
+				<article id="artigoprincipal">
+					<header id="cabecalhoartigo">
+						<hgroup>
+							<h3>Fale Conosco > Contato</h3>
+							<h1>Formulário de Inscrição</h1>
+							<h2>por Michael Jonathan</h2>
+							<h3 class="direita">Atualizado em 21/Setembro/2019</h3>
+						</hgroup>
+					</header>
+
+					<form  method="post" id="test">
+						<fieldset id="usuario"><!--Conjunto de Campos-->
+							<legend>Identificação:</legend>
+							<p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo" oninput="validaSobreNome()" required></p>
+							<div id="nome"></div></p>
+							<p><label>Telefone:</label></label>
+						<input id="phone" name="phone" type="tel" size="12" minlength="12" maxlength="12" pattern="[0-9]{2}-[0-9]{9}" placeholder = "99-999999999" required>	
+							</p>
+							<div id="nome"></div></p>
+							<fieldset id="redeSocial"  onclick="functionSocial(); validarEnvio()" ><legend>Possui Rede Social?:</legend>
+							<input type="radio" name="tOpt" id="sim" value="sim" requerid><label for="sim">Sim</label></br>
+							<input type="radio" name="tOpt" id="nao" value="nao" checked><label for="nao">Não</label>
+							</fieldset>
+							<input type="text" id="dadosFormatado" style="visibility: hidden">
+							<div id="textRedesSociais"></div>
+						</fieldset>
+						<fieldset  id="processoSel">
+							<legend>Dados Processo Seletivo:</legend>
+							<p><label for="cEst">Como nos conheceu?</label>
+								<select name="tEst" id="cEst">
+									<optgroup label="Selecione Uma opção">
+										<option value="Tv">Tv</option>
+										<option value="Internet">Internet</option>
+										<option selected value="Outros">Outros</option>
+									</optgroup>
+								</select>
+							</p>							
+						</fieldset>
+						<div id="botaodiv">						
+						<input type='submit' class='formButton' name='botao' id='botao' value='Enviar' style="visibility: hidden"> 
+						</div>	
+					</form>
+				</article>
+			</section>
+			<footer id="rodape">
+				<p>Copyright &copy; 2019 - by Michael Jonathan</br>
+			</footer>			
+		</div>
+		<script>
+		$('input[type=submit]').click(function() {
+			$(this).attr('disabled', 'disabled');
+			$(this).parents('form').submit()
+		});
+		</script>
+	</body>
+</html>
